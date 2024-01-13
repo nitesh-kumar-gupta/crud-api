@@ -1,0 +1,42 @@
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: The auto-generated id (uuid) of the user
+        username:
+          type: string
+          description: Name of the user
+        age:
+          type: integer
+          description: Age of the user
+        hobbies:
+          type: array
+          items:
+            type: string
+          description: hobbies of the user as array of string
+    UserInput:
+      type: object
+      properties:
+        username:
+          type: string
+          description: Name of the user
+        age:
+          type: integer
+          description: Age of the user
+        hobbies:
+          type: array
+          items:
+            type: string
+          description: hobbies of the user as array of string
+  parameters:
+    UserId:
+      name: userId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
