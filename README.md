@@ -86,7 +86,7 @@ npm run lint
 npm run lint:fix
 ```
 
-## Linting
+## Prettier
 
 Check code indent and fix with Prettier
 
